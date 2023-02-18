@@ -107,6 +107,38 @@
 \bibliography{publications}
 
 
+% Vanity (https://tex.stackexchange.com/questions/359311/how-to-underline-name-of-specific-authors-in-biblatex)
+\usepackage{xpatch}
+\usepackage[normalem]{ulem} %for \uline
+
+\newbox\savenamebox
+
+% Actually I don't use the bold version anymore
+\newbibmacro*{name:bbold}[2]{%
+  \def\do##1{\iffieldequalstr{hash}{##1}{\setbox\savenamebox\hbox\bgroup \listbreak}{}}%
+  % \def\do##1{\iffieldequalstr{hash}{##1}{\bfseries\setbox\savenamebox\hbox\bgroup \listbreak}{}}%
+  \dolistloop{\boldnames}%
+}
+
+\newbibmacro*{name:ebold}[2]{%
+  \def\do##1{\iffieldequalstr{hash}{##1}{\egroup\uline{\usebox\savenamebox}\listbreak}{}}%
+  \dolistloop{\boldnames}%
+}
+
+\xpatchbibmacro{name:given-family}{\usebibmacro{name:delim}{#2#3#1}}{\usebibmacro{name:delim}{#2#3#1}\begingroup\usebibmacro{name:bbold}{#1}{#2}}{}{}
+
+%\xpretobibmacro{name:given-family}{\begingroup\usebibmacro{name:bbold}{#1}{#2}}{}{}
+\xapptobibmacro{name:delim}{\begingroup\normalfont}{}{}
+
+\xapptobibmacro{name:given-family}{\usebibmacro{name:ebold}{#1}{#2}\endgroup}{}{}
+\xapptobibmacro{name:delim}{\endgroup}{}{}
+
+% Hash in the bbl file
+\newcommand*{\boldnames}{}
+\forcsvlist{\listadd\boldnames}{
+  {f9515b75cdf9643ea5818174fe975e2b}, % Ruhi
+  }
+
 % get rid of the number-labels ([1], [2], etc.) in front of publications
 \defbibenvironment{midbib}
 {\list
