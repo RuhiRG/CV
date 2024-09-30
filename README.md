@@ -14,7 +14,18 @@ license!). Compiles with `latexmk`. Derived from
 
 ### ARM MacOS
 
-`conda-forge` only has a broken `texlive-core` distribution shipped. To work around this, `tectonic` can be used, however `biber` needs to be built from source, ergo the environment needs `python` and `perl` within the conda based environment. Easier to handle locally via `pixi`
+`conda-forge` only has a broken `texlive-core` distribution shipped. To work around this, `tectonic` can be used, however `biber` needs to be built from source or grabbed from `tinytex` which can correctly setup `tlmgr`, ergo the environment needs `python` and `perl` within the conda based environment. Much easier to actually install `texlive` but for a weird work-around consider using `TinyTex` and `texliveonfly`
+
+```bash
+pixi shell
+Rscript -e "tinytex::install_tinytex()"
+# The command above can fail, nevermind
+export PATH="$PATH:$HOME/Library/TinyTeX/bin/universal-darwin"
+tlmgr install texliveonfly # needs python
+texliveonfly -c xelatex cv.tex
+# next time
+latexmk -pvc -pdfxe -f cv.tex
+```
 
 ## License
 
