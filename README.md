@@ -12,6 +12,10 @@ license!). Compiles with `latexmk`. Derived from
 - Run make (Check `Makefile` for other options)
 - Profit
 
+### ARM MacOS
+
+`conda-forge` only has a broken `texlive-core` distribution shipped. To work around this, `tectonic` can be used, however `biber` needs to be built from source, ergo the environment needs `python` and `perl` within the conda based environment. Easier to handle locally via `pixi`
+
 ## License
 
 The [MIT license](https://choosealicense.com/licenses/mit/) seems appropriate for the template. Content is my own, so please
