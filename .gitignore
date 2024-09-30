@@ -1,3 +1,6 @@
+# Added
+.pixi
+# TeX
 *.aux
 *.bbl
 *.bcf
