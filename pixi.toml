@@ -9,4 +9,6 @@ platforms = ["osx-arm64"]
 [tasks]
 
 [dependencies]
-texlive-core = "20230313.*"
+r-tinytex = "0.53.*"
+tectonic = "0.15.0.*"
+python = "3.12.6.*"
