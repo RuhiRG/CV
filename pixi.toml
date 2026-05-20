@@ -1,5 +1,5 @@
-[project]
-name = "CV"
+[workspace]
+name = "ruhiCV"
 version = "0.1.0"
 description = "Add a short description here"
 authors = ["Ruhila S <ruhiresearcher209@gmail.com>"]
@@ -7,8 +7,14 @@ channels = ["conda-forge"]
 platforms = ["osx-arm64"]
 
 [tasks]
+mktex-full = "emacs -nl --script scripts/org2tex.el curriculum-vitae/literate_cv.org"
+mkpdf-full = { cmd = "latexmk -pdfxe -halt-on-error literate_cv.tex", depends-on = ["mktex-full"], cwd = "curriculum-vitae/" }
+all = { depends-on = ["mkpdf-full"] }
+clean = "find curriculum-vitae -type f \\( -name '*.aux' -o -name '*.log' -o -name '*.bbl' -o -name '*.bcf' -o -name '*.blg' -o -name '*.fdb_latexmk' -o -name '*.fls' -o -name '*.xml' -o -name '*.synctex.gz' -o -name '*.xdv' \\) -delete"
+tangle-full = "emacs --batch -l org curriculum-vitae/literate_cv.org --eval '(org-babel-tangle)'"
 
 [dependencies]
+emacs = "*"
 r-tinytex = "0.53.*"
 tectonic = "0.15.0.*"
 python = "3.12.6.*"

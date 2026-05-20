@@ -1,5 +1,26 @@
-\documentclass[11pt, a4paper, final, factor=1100, stretch=16, shrink=16]{moderncv}
+#+AUTHOR: Ruhila Goswami
+#+email: ruhila@ieee.org
+#+options: tags:nil title:nil toc:nil
+# Usage: run scripts/org2tex.el on this file, then build the generated TeX.
 
+* Configuration :ignoreheading:ignore:
+:PROPERTIES:
+:VISIBILITY: folded
+:END:
+#+begin_src emacs-lisp :exports none :eval always :results none
+(org-babel-tangle)
+#+end_src
+
+** Theme :ignoreheading:ignore:
+#+LATEX_COMPILER: xelatex
+#+LATEX_CLASS: moderncv
+#+LATEX_CLASS_OPTIONS: [11pt,a4paper,final,factor=1100,stretch=16,shrink=16]
+
+* Preamble :ignoreheading:ignore:noexport:
+The LaTeX setup is tangled to =preamble.tex= and included during export.
+
+#+name: cv_preamble
+#+begin_src latex :results none :tangle preamble.tex
 \usepackage{color}
 \usepackage{fontspec}
 
@@ -16,14 +37,14 @@
 %\usepackage[scale=0.75]{geometry}
 
 % change width of the column with the dates
-\setlength{\hintscolumnwidth}{2.5cm} 
+\setlength{\hintscolumnwidth}{2.5cm}
 
-%\PassOptionsToPackage[final, factor=1100, stretch=18, shrink=18 ]{microtype} 	
+%\PassOptionsToPackage[final, factor=1100, stretch=18, shrink=18 ]{microtype}
 % The final option overrides global defaults. It greatly improves general appearance of the text. The stretch and shrink reduce bluriness[20,20 default]. The factor increases protrusion amount by 10%, [default 1000]
 % Tracking allows for small caps, like in cites to be adjusted. The activate commands are to set protrusion.
 
 \microtypecontext{spacing=nonfrench} 						% To preserve interword spacing via \nonfrenchspacing.
- 
+
 \SetExtraKerning[unit=space] 								% These produce more effects, from microtype with kerning.
     {encoding={*}, family={bch}, series={*}, size={footnotesize,small,normalsize}}
     {\textendash={400,400}, 								% en-dash, add more space around it
@@ -35,7 +56,7 @@
 
 \SetExtraKerning[unit=space]
   {encoding={*}, family={qhv}, series={b}, size={large,Large}}
-  {1={-200,-200}, 
+  {1={-200,-200},
    \textendash={400,400}}
 
 \SetTracking{encoding={*}, shape=sc}{40} 					% This is for better small caps with tracking and microtype.
@@ -56,7 +77,7 @@
  }
 
 % required when changing page layout lengths
-\AtBeginDocument{\recomputelengths} 
+\AtBeginDocument{\recomputelengths}
 \usepackage{xunicode}
 \usepackage{xltxtra}
 % \usepackage[utf8]{inputenc} (Xelatex expects UTF8 anyway)
@@ -88,10 +109,10 @@
 \usepackage[british,UKenglish,USenglish,american]{babel}
 
 % insert dummy text (used in the letter)
-%\usepackage{lipsum} 
+%\usepackage{lipsum}
 
 % used for \begin{comment}...\end{comment}
-\usepackage{verbatim} 
+\usepackage{verbatim}
 
 % use guilllemets in bibliography (not german.) Also autostyle superceeded babel
 \usepackage[autostyle=true]{csquotes}
@@ -173,8 +194,8 @@
 \DeclareFieldFormat{usera}{\color{color1}[\href{#1}{\textsc{doi}}]}
 \AtEveryBibitem{
 	% put [DOI] stuff at the end of a publication entry
-	\csappto{blx@bbx@\thefield{entrytype}}{% 
-		\iffieldundef{usera}{ 
+	\csappto{blx@bbx@\thefield{entrytype}}{%
+		\iffieldundef{usera}{
 			% this gets invoked, once nothing is supplied
 			% via the mypdf or mydoi value.
 			% you could e.g. display a default thing here.
@@ -248,7 +269,7 @@ Scale=MatchLowercase]{MyriadPro}
 
 % \faEnvelope \faPhone \faGithub \faGlobe
 
-% I use the extrainfo command for additional information, since I 
+% I use the extrainfo command for additional information, since I
 % want to use custom icons and have finer control over spacing.
 \extrainfo{
 	{\small\faEnvelope}\hspace{0.3em}ruhila@ieee.org\\
@@ -264,9 +285,12 @@ Scale=MatchLowercase]{MyriadPro}
 \newcommand{\spacesection}{\vspace{0.4cm}}
 \newcommand{\spacesubsection}{\vspace{0.2cm}}
 
+#+end_src
 
-%===========================
-\begin{document}
+#+LATEX_HEADER: \input{preamble.tex}
+
+* TeX Document Extras :ignoreheading:ignore:
+#+begin_export latex
 
 % Adapted from https://tex.stackexchange.com/a/170219/130845
 \begin{tikzpicture}[remember picture,overlay]
@@ -276,13 +300,25 @@ Scale=MatchLowercase]{MyriadPro}
 
 \maketitle
 
-\section{Personal Data}
+#+end_export
+
+* Personal Data
+:PROPERTIES:
+:CUSTOM_ID: personal-data
+:END:
+#+begin_export latex
 \cvitem{Name}{Ruhila Goswami}
 \cvitem{Date Of Birth}{20.09.2001}
 % \cvitem{Birthplace}{Virudhunagar, Tamil Nadu, India}
 
 \spacesection{}
-\section{Education}
+#+end_export
+
+* Education
+:PROPERTIES:
+:CUSTOM_ID: education
+:END:
+#+begin_export latex
 \cventry{\textsc{2024--2026}}{M.S. Biological Science}{University of Iceland}{Reyjavik}{\emph{Iceland}}{(\textsc{Advisor: } Prof. Arnar Pálsson)}{(\textsc{Project: Diversity in craniofacial elements by populations and sexes in salmonids} )}
 
 
@@ -293,8 +329,20 @@ Scale=MatchLowercase]{MyriadPro}
 \cventry{\textsc{2017}}{High School (AISSE)}{Velammal Vidyalaya, Ayanabakkam}{Chennai}{\emph{India}}{$10.0$ Cumulative Grade Point Average (CGPA) in Central Board of Secondary Education (CBSE)}
 
 \spacesection
-\section{Experience}
-\subsection{Internships}
+#+end_export
+
+* Experience
+:PROPERTIES:
+:CUSTOM_ID: experience
+:END:
+#+begin_export latex
+#+end_export
+
+** Internships
+:PROPERTIES:
+:CUSTOM_ID: internships
+:END:
+#+begin_export latex
 
 \cventry{\textsc{Summer 2023}}{Prof. Arnar Pálsson}{University of
 Iceland}{}{Research Staff}{Studied the synteny of Histone genes for Salmonids,
@@ -317,7 +365,13 @@ focusing on their arrangement and neighboring genomic regions.}
 
 \cventry{\textsc{Summer 2021}}{Dr. Lolitika Mandal}{IISER Mohali}{}{Research Intern}{Exploring Genetic Tools for working with Drosophila from a wet-lab perspective of data collection and analysis.}
 
-\subsection{Volunteer Work}
+#+end_export
+
+** Volunteer Work
+:PROPERTIES:
+:CUSTOM_ID: volunteer-work
+:END:
+#+begin_export latex
 
 \cventry{\textsc{June-August 2024}}{\texttt{pydSEAMSlib}: Enhanced Python bindings for d-SEAMS}{Google Summer of Code}{}{Student Developer}{This was continuation of my last year's project. This project focused on improving the usability and accessibility of `pySEAMS` by creating comprehensive documentation, refining the installation process, and integrating new features to make the tool more user-friendly}
 
@@ -330,26 +384,62 @@ focusing on their arrangement and neighboring genomic regions.}
 % \cventry{\textsc{2021--present}}{Dance Society}{IISER Mohali}{}{Member}{Active participant for choreography and performances.}
 
 \spacesection{}
-\section{Teaching Experience}
+#+end_export
+
+* Teaching Experience
+:PROPERTIES:
+:CUSTOM_ID: teaching-experience
+:END:
+#+begin_export latex
 % TODO: Add more carpentries
 \cventry{\textsc{Spring 2025}}{LÍF403G Evolutionary Biology}{University of Iceland}{}{Teaching Assistant}{8 credit undergraduate course on evolutionary theory, natural selection, adaptation, and the history of life.}
 
 \spacesection{}
-\section{Certifications}
+#+end_export
+
+* Certifications
+:PROPERTIES:
+:CUSTOM_ID: certifications
+:END:
+#+begin_export latex
 
 % Consider moving to be below Education
 \spacesubsection{}
-\subsection{NPTEL Courses}
+#+end_export
+
+** NPTEL Courses
+:PROPERTIES:
+:CUSTOM_ID: nptel-courses
+:END:
+#+begin_export latex
 \cventry{\textsc{April 2024}}{Biophotonics}{IIT Kharagpur}{Distinction}{$87\%$}{} % TODO: Add certificate
 \cventry{\textsc{April 2024}}{Introduction to Professional Scientific communication}{IIT Kanpur}{}{$79\%$}{} % TODO: Add certificate
 \cventry{\textsc{Sep 2022}}{Applications of machine learning techniques in biology using WEKA}{IIT Madras}{Distinction}{$93\%$}{} % TODO: Add certificate
 
-\subsection{Other Courses}
+#+end_export
+
+** Other Courses
+:PROPERTIES:
+:CUSTOM_ID: other-courses
+:END:
+#+begin_export latex
 \cventry{\textsc{Nov 2022}}{Practical Python for beginners: a biochemist's guide}{Biochemical Society, U.K.}{}{}{}
 % \cventry{\textsc{Nov 2022}}{The future of HPC programming - a Modern Fortran workshop}{Swedish National Infrastructure for Computing, Online}{}{}{}
 
-\section{Technical Skills}
-\subsection{Programming Languages}
+#+end_export
+
+* Technical Skills
+:PROPERTIES:
+:CUSTOM_ID: technical-skills
+:END:
+#+begin_export latex
+#+end_export
+
+** Programming Languages
+:PROPERTIES:
+:CUSTOM_ID: programming-languages
+:END:
+#+begin_export latex
 \spacesubsection{}
 
 \cvdoubleitem{\textsc{Experienced}}{R, Python (3.x), Shell (zsh,bash)}
@@ -357,21 +447,39 @@ focusing on their arrangement and neighboring genomic regions.}
 
 % \newpage
 \spacesubsection{}
-\subsection{Bioinformatics Packages}
+#+end_export
+
+** Bioinformatics Packages
+:PROPERTIES:
+:CUSTOM_ID: bioinformatics-packages
+:END:
+#+begin_export latex
 \spacesubsection{}
 
 \cvdoubleitem{\textsc{Experienced}}{Randomized Axelerated Maximum Likelihood new generation (RAXML-NG), MUSCLE5 (multiple sequence alignment)}
            {\textsc{Familiar}}{WEKA, BEAST2 (Bayesian Evolutionary Analysis Sampling Trees) via babette, Snakemake}
 
 \spacesubsection{}
-\subsection{Tools}
+#+end_export
+
+** Tools
+:PROPERTIES:
+:CUSTOM_ID: tools
+:END:
+#+begin_export latex
 \spacesubsection{}
 
 \cvdoubleitem{\textsc{Experienced}}{Git (version control), ssh, Vim, Markdown}
            {\textsc{Familiar}}{Office-Suites (MS, OpenOffice, LibreOffice)}
 
 \spacesubsection{}
-\subsection{Experimental}
+#+end_export
+
+** Experimental
+:PROPERTIES:
+:CUSTOM_ID: experimental
+:END:
+#+begin_export latex
 \spacesubsection{}
 
 \cvdoubleitem{\textsc{Fly}}{Handling flies (wild-type, w118, tubby), Drosophila larva dissection (brain, salivary gland, proventriculus, imaginal discs, gastric caeca), Fixing, staining, mounting viewing tissues with Flourescent microscopes, Making PBS, PFA}
@@ -381,13 +489,31 @@ focusing on their arrangement and neighboring genomic regions.}
            {\textsc{Professional}}{Time management, critical thinking, problem solving, communication}
 % \newpage
 % \spacesection
-\section{Research Topics}
+#+end_export
+
+* Research Topics
+:PROPERTIES:
+:CUSTOM_ID: research-topics
+:END:
+#+begin_export latex
 \cvdoubleitem{\textsc{Experienced}}{Phylogenetic Tree Construction (Distance, Maximum Likelihood, Bayesian), Evolutionary Biology, Population genetics, R reproducible literate programming, High performance open source software, Scientific Software Development for High Throughput calculations, synteny}
            {\textsc{Interested}}{Biomolecular simulations, Genomics, Modeling genetic markers for disease, Evolutionary genetics}
 
 \spacesection{}
-\section{Affiliations}
-\subsection{Memberships}
+#+end_export
+
+* Affiliations
+:PROPERTIES:
+:CUSTOM_ID: affiliations
+:END:
+#+begin_export latex
+#+end_export
+
+** Memberships
+:PROPERTIES:
+:CUSTOM_ID: memberships
+:END:
+#+begin_export latex
 \spacesubsection{}
 \cventry{\textsc{2024--present}}{Nordic Society Oikos}{}{Student Member}{}{}
 \cventry{\textsc{2024--present}}{Icelandic Ecological Society (Vistis)}{}{Student Member}{}{}
@@ -406,7 +532,13 @@ Líffræðigáttin)}{}{Student Member}{}{}
 \cventry{\textsc{2022--present}}{ACM (Association for Computing Machinery)}{}{Student Member}{}{}
 
 \spacesection{}
-\section{Publications}
+#+end_export
+
+* Publications
+:PROPERTIES:
+:CUSTOM_ID: publications
+:END:
+#+begin_export latex
 %  {\color{color1}\textsc{Journals}}
 
 % \nocite{*}
@@ -423,13 +555,31 @@ Líffræðigáttin)}{}{Student Member}{}{}
 \printbibliography[heading=none, env=midbib, keyword=preprint]
 
 \spacesection{}
-\section{Conference Records}
+#+end_export
 
-\subsection{Posters}
+* Conference Records
+:PROPERTIES:
+:CUSTOM_ID: conference-records
+:END:
+#+begin_export latex
+
+#+end_export
+
+** Posters
+:PROPERTIES:
+:CUSTOM_ID: posters
+:END:
+#+begin_export latex
 \cventry{\textsc{May 2025}}{Diversity in craniofacial elements by populations and sexes in salmonids of Iceland}{Icelandic Ecological Society}{\underline{Ruhila S.}}{}{}
 \cventry{\textsc{November 2022}}{Tracing Lineages of \textit{Salmo Salar} through Histone sequence data}{BES Annual Meeting 2022}{\underline{Ruhila S.}}{}{}
 
-\subsection{Oral Presentations}
+#+end_export
+
+** Oral Presentations
+:PROPERTIES:
+:CUSTOM_ID: oral-presentations
+:END:
+#+begin_export latex
 \cventry{\textsc{November 2022}}{High Throughput Reproducible Literate Phylogenetic Analysis}{IEEE PDGC 2022}{R. Goswami, \underline{Ruhila S.}}{}{}
 \cventry{\textsc{November 2022}}{Reproducible High Performance Computing Without Redundancy with Nix}{IEEE PDGC 2022}{R. Goswami, \underline{Ruhila S.}, A. Goswami, S. Goswami and D. Goswami}{}{}
 \cventry{\textsc{November 2022}}{Reproducible Literate Programming Workflows for Censored Data}{IOP Machine Learning for Healthcare}{R. Goswami, \underline{R. S.}}{}{}
@@ -438,7 +588,7 @@ Líffræðigáttin)}{}{Student Member}{}{}
 % this part is a simple cover letter
 %\clearpage
 
-%\recipient{Human Resources}{Some Company Ltd.\\Some Street 123\\12345 Some City} 
+%\recipient{Human Resources}{Some Company Ltd.\\Some Street 123\\12345 Some City}
 %\date{\today}
 %\opening{Dear Sir or Madam,}
 %\closing{Sincerely yours,}
@@ -446,14 +596,7 @@ Líffræðigáttin)}{}{Student Member}{}{}
 
 %\makelettertitle
 
-%\lipsum[1-3] 
+%\lipsum[1-3]
 
 %\makeletterclosing
-
-
-\end{document}
-
-%%% Local Variables:
-%%% mode: latex
-%%% TeX-master: t
-%%% End:
+#+end_export

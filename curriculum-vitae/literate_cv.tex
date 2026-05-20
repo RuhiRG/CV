@@ -1,272 +1,14 @@
-\documentclass[11pt, a4paper, final, factor=1100, stretch=16, shrink=16]{moderncv}
-
-\usepackage{color}
-\usepackage{fontspec}
-
-% Stop bugging me about \es
-\usepackage{xspace}
-% moderncv themes
-\moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
-%\moderncvcolor{blue}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
-
-% the (custom) color which will be used in the cv
-\definecolor{color1}{RGB}{100, 14, 39}
-
-% scale the page layout (depreciated for more complicated stuff)
-%\usepackage[scale=0.75]{geometry}
-
-% change width of the column with the dates
-\setlength{\hintscolumnwidth}{2.5cm} 
-
-%\PassOptionsToPackage[final, factor=1100, stretch=18, shrink=18 ]{microtype} 	
-% The final option overrides global defaults. It greatly improves general appearance of the text. The stretch and shrink reduce bluriness[20,20 default]. The factor increases protrusion amount by 10%, [default 1000]
-% Tracking allows for small caps, like in cites to be adjusted. The activate commands are to set protrusion.
-
-\microtypecontext{spacing=nonfrench} 						% To preserve interword spacing via \nonfrenchspacing.
- 
-\SetExtraKerning[unit=space] 								% These produce more effects, from microtype with kerning.
-    {encoding={*}, family={bch}, series={*}, size={footnotesize,small,normalsize}}
-    {\textendash={400,400}, 								% en-dash, add more space around it
-     "28={ ,150}, 											% Left bracket, add space from right
-     "29={150, },											% Right bracket, add space from left
-     \textquotedblleft={ ,150}, 							% Left quotation mark, space from right
-     \textquotedblright={150, }} 							% Right quotation mark, space from left
+% Created 2026-05-20 Wed 06:28
+% Intended LaTeX compiler: xelatex
+\documentclass[11pt,a4paper,final,factor=1100,stretch=16,shrink=16]{moderncv}
 
 
-\SetExtraKerning[unit=space]
-  {encoding={*}, family={qhv}, series={b}, size={large,Large}}
-  {1={-200,-200}, 
-   \textendash={400,400}}
-
-\SetTracking{encoding={*}, shape=sc}{40} 					% This is for better small caps with tracking and microtype.
-
-\SetProtrusion{encoding={*},family={bch},series={*},size={6,7}}  % This enables better optical views.
-              {1={ ,750},2={ ,500},3={ ,500},4={ ,500},5={ ,500},
-               6={ ,500},7={ ,600},8={ ,500},9={ ,500},0={ ,500}}
-
-% Page settings
-\usepackage{geometry}
- \geometry{
- a4paper,
- % total={210mm,297mm},
- % left=15mm,
- % right=15mm,
- % top=10mm,
- % bottom=08mm,
- }
-
-% required when changing page layout lengths
-\AtBeginDocument{\recomputelengths} 
-\usepackage{xunicode}
-\usepackage{xltxtra}
-% \usepackage[utf8]{inputenc} (Xelatex expects UTF8 anyway)
-
-% I like pretty logos
-\usepackage{metalogo}
-
-% Widen the letter spacing for logos
-\setlogokern{La}{0.2pt}
-\setlogokern{Xe}{0.2pt}
-\setlogokern{eL}{0.2pt}
-\setlogokern{Te}{0.2pt}
-\setlogokern{aT}{0.2pt}
-\setlogokern{eX}{0.2pt}
-
-% Better Quotes (depreciated for this useage)
-%\usepackage{epigraph}
-
-% Poaching from Espresso's ug.tex
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%% New Commands and Environments %%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\es}{\mbox{\textsf{ESPResSo}}\xspace}
-
-% german word break/hyphenation rules that's with ngerman (we use english)
-\usepackage[british,UKenglish,USenglish,american]{babel}
-
-% insert dummy text (used in the letter)
-%\usepackage{lipsum} 
-
-% used for \begin{comment}...\end{comment}
-\usepackage{verbatim} 
-
-% use guilllemets in bibliography (not german.) Also autostyle superceeded babel
-\usepackage[autostyle=true]{csquotes}
-
-\usepackage[
-	sorting=none,
-	minbibnames=8,
-	maxbibnames=9,
-	block=space,
-  defernumbers=true
-]{biblatex}
-
-\bibliography{publications}
-
-
-% Vanity (https://tex.stackexchange.com/questions/359311/how-to-underline-name-of-specific-authors-in-biblatex)
-\usepackage{xpatch}
-\usepackage[normalem]{ulem} %for \uline
-
-\newbox\savenamebox
-
-% Actually I don't use the bold version anymore
-\newbibmacro*{name:bbold}[2]{%
-  \def\do##1{\iffieldequalstr{hash}{##1}{\setbox\savenamebox\hbox\bgroup \listbreak}{}}%
-  % \def\do##1{\iffieldequalstr{hash}{##1}{\bfseries\setbox\savenamebox\hbox\bgroup \listbreak}{}}%
-  \dolistloop{\boldnames}%
-}
-
-\newbibmacro*{name:ebold}[2]{%
-  \def\do##1{\iffieldequalstr{hash}{##1}{\egroup\uline{\usebox\savenamebox}\listbreak}{}}%
-  \dolistloop{\boldnames}%
-}
-
-\xpatchbibmacro{name:given-family}{\usebibmacro{name:delim}{#2#3#1}}{\usebibmacro{name:delim}{#2#3#1}\begingroup\usebibmacro{name:bbold}{#1}{#2}}{}{}
-
-%\xpretobibmacro{name:given-family}{\begingroup\usebibmacro{name:bbold}{#1}{#2}}{}{}
-\xapptobibmacro{name:delim}{\begingroup\normalfont}{}{}
-
-\xapptobibmacro{name:given-family}{\usebibmacro{name:ebold}{#1}{#2}\endgroup}{}{}
-\xapptobibmacro{name:delim}{\endgroup}{}{}
-
-% Hash in the bbl file
-\newcommand*{\boldnames}{}
-\forcsvlist{\listadd\boldnames}{
-  {f9515b75cdf9643ea5818174fe975e2b}, % Ruhi
-  }
-
-% get rid of the number-labels ([1], [2], etc.) in front of publications
-\defbibenvironment{midbib}
-{\list
-	{}
-	{
-		\setlength{\leftmargin}{0mm}
-		\setlength{\itemindent}{-\leftmargin}
-		\setlength{\itemsep}{\bibitemsep}
-		\setlength{\parsep}{\bibparsep}}
-	}
-	{\endlist}
-{\item}
-
-
-% add [DOI] and [PDF] fields at the end of each publication entry
-\DeclareSourcemap{
-	\maps[datatype=bibtex]{
-		% the bibtex entry 'mydoi' gets mapped to 'usera'
-		\map{
-			\step[fieldsource=mydoi]
-			\step[fieldset=usera, origfieldval]
-		}
-		% the bibtex entry 'mypdf' gets mapped to 'usera'
-		\map{
-			\step[fieldsource=mypdf]
-			\step[fieldset=userb, origfieldval]
-		}
-	}
-}
-
-% [DOI] entries in publication
-\DeclareFieldFormat{usera}{\color{color1}[\href{#1}{\textsc{doi}}]}
-\AtEveryBibitem{
-	% put [DOI] stuff at the end of a publication entry
-	\csappto{blx@bbx@\thefield{entrytype}}{% 
-		\iffieldundef{usera}{ 
-			% this gets invoked, once nothing is supplied
-			% via the mypdf or mydoi value.
-			% you could e.g. display a default thing here.
-		}{\space\printfield{usera}}}
-}
-
-% [PDF] entries in publication
-\DeclareFieldFormat{userb}{\color{color1}[\href{#1}{\textsc{pdf}}]}
-
-\AtEveryBibitem{
-	% put [DOI] stuff at the end of a publication entry
-	\csappto{blx@bbx@\thefield{entrytype}}{\iffieldundef{userb}{}{\printfield{userb}}}
-}
-
-\renewcommand*{\mkbibnamegiven}[1]{%
-	\ifitemannotation{highlight}
-	{\textbf{#1}}
-	{#1}}
-
-	\renewcommand*{\mkbibnamefamily}[1]{%
-	\ifitemannotation{highlight}
-	{\textbf{#1}}
-	{#1}
-}
-
-
-% Minion Pro is used as the main font, if you don't
-% have it installed uncomment this line or choose another pretty font.
-% Literata is also included.
-%\setmainfont[Numbers=OldStyle]{Minion Pro}
-
-\setmainfont[
-Path = Fonts/MinionPro/,
-Numbers=OldStyle,
-Extension = .otf,
-UprightFont = *_Regular,
-ItalicFont = *_It,
-BoldFont = *_Bold,
-BoldItalicFont = *_BoldIt
-]{MinionPro}
-
-% Myriad Pro is used as the sans font, if you don't
-% have it installed uncomment this line or choose another pretty font.
-\setsansfont[
-Path = Fonts/MyriadPro/,
-Numbers=OldStyle,
-Extension = .otf,
-UprightFont = *_Regular,
-ItalicFont = *_It,
-BoldFont = *_Bold,
-BoldItalicFont = *_BoldIt,
-Ligatures=TeX,
-Scale=MatchLowercase]{MyriadPro}
-
-% the moderncv package will populate a lot of the pdf meta-information.
-% this can be used to change some of these infos.
-\AfterPreamble{\hypersetup{
-  pdfcreator={XeLaTeX},
-  pdftitle={First fledging CV}
-}}
-
-% for the icons (telephone, globe). I found the icons provided by the
-% fontawesome package prettier than the standard moderncv icons.
-\defaultfontfeatures{
-    Path = Fonts/FontAwesome/ }
-
-% personal data
-\firstname{Ruhila}
-\familyname{Goswami}
-\quote{``Nothing exists for itself alone, but only in relation to other forms of life.''\\-- Charles Darwin}
-
-% \faEnvelope \faPhone \faGithub \faGlobe
-
-% I use the extrainfo command for additional information, since I 
-% want to use custom icons and have finer control over spacing.
-\extrainfo{
-	{\small\faEnvelope}\hspace{0.3em}ruhila@ieee.org\\
-	{\small\faGithub}\hspace{0.3em}RuhiRG%\\
-	% \faGlobe\hspace{0.3em}https://github.com/RuhiRG/
-}
-
-
-% picture, resized to a height of 84pt
-\photo[84pt]{Picture/ruhi}
-
-% spacing before (sub)sections
-\newcommand{\spacesection}{\vspace{0.4cm}}
-\newcommand{\spacesubsection}{\vspace{0.2cm}}
-
-
-%===========================
+\input{preamble.tex}
+\author{Ruhila Goswami}
+\date{\today}
+\title{}
 \begin{document}
+
 
 % Adapted from https://tex.stackexchange.com/a/170219/130845
 \begin{tikzpicture}[remember picture,overlay]
@@ -275,14 +17,15 @@ Scale=MatchLowercase]{MyriadPro}
 \end{tikzpicture}
 
 \maketitle
-
 \section{Personal Data}
+\label{personal-data}
 \cvitem{Name}{Ruhila Goswami}
 \cvitem{Date Of Birth}{20.09.2001}
 % \cvitem{Birthplace}{Virudhunagar, Tamil Nadu, India}
 
 \spacesection{}
 \section{Education}
+\label{education}
 \cventry{\textsc{2024--2026}}{M.S. Biological Science}{University of Iceland}{Reyjavik}{\emph{Iceland}}{(\textsc{Advisor: } Prof. Arnar Pálsson)}{(\textsc{Project: Diversity in craniofacial elements by populations and sexes in salmonids} )}
 
 
@@ -294,7 +37,10 @@ Scale=MatchLowercase]{MyriadPro}
 
 \spacesection
 \section{Experience}
+\label{experience}
+
 \subsection{Internships}
+\label{internships}
 
 \cventry{\textsc{Summer 2023}}{Prof. Arnar Pálsson}{University of
 Iceland}{}{Research Staff}{Studied the synteny of Histone genes for Salmonids,
@@ -316,8 +62,8 @@ focusing on their arrangement and neighboring genomic regions.}
 }
 
 \cventry{\textsc{Summer 2021}}{Dr. Lolitika Mandal}{IISER Mohali}{}{Research Intern}{Exploring Genetic Tools for working with Drosophila from a wet-lab perspective of data collection and analysis.}
-
 \subsection{Volunteer Work}
+\label{volunteer-work}
 
 \cventry{\textsc{June-August 2024}}{\texttt{pydSEAMSlib}: Enhanced Python bindings for d-SEAMS}{Google Summer of Code}{}{Student Developer}{This was continuation of my last year's project. This project focused on improving the usability and accessibility of `pySEAMS` by creating comprehensive documentation, refining the installation process, and integrating new features to make the tool more user-friendly}
 
@@ -331,25 +77,30 @@ focusing on their arrangement and neighboring genomic regions.}
 
 \spacesection{}
 \section{Teaching Experience}
+\label{teaching-experience}
 % TODO: Add more carpentries
 \cventry{\textsc{Spring 2025}}{LÍF403G Evolutionary Biology}{University of Iceland}{}{Teaching Assistant}{8 credit undergraduate course on evolutionary theory, natural selection, adaptation, and the history of life.}
 
 \spacesection{}
 \section{Certifications}
+\label{certifications}
 
 % Consider moving to be below Education
 \spacesubsection{}
 \subsection{NPTEL Courses}
+\label{nptel-courses}
 \cventry{\textsc{April 2024}}{Biophotonics}{IIT Kharagpur}{Distinction}{$87\%$}{} % TODO: Add certificate
 \cventry{\textsc{April 2024}}{Introduction to Professional Scientific communication}{IIT Kanpur}{}{$79\%$}{} % TODO: Add certificate
 \cventry{\textsc{Sep 2022}}{Applications of machine learning techniques in biology using WEKA}{IIT Madras}{Distinction}{$93\%$}{} % TODO: Add certificate
-
 \subsection{Other Courses}
+\label{other-courses}
 \cventry{\textsc{Nov 2022}}{Practical Python for beginners: a biochemist's guide}{Biochemical Society, U.K.}{}{}{}
 % \cventry{\textsc{Nov 2022}}{The future of HPC programming - a Modern Fortran workshop}{Swedish National Infrastructure for Computing, Online}{}{}{}
-
 \section{Technical Skills}
+\label{technical-skills}
+
 \subsection{Programming Languages}
+\label{programming-languages}
 \spacesubsection{}
 
 \cvdoubleitem{\textsc{Experienced}}{R, Python (3.x), Shell (zsh,bash)}
@@ -358,6 +109,7 @@ focusing on their arrangement and neighboring genomic regions.}
 % \newpage
 \spacesubsection{}
 \subsection{Bioinformatics Packages}
+\label{bioinformatics-packages}
 \spacesubsection{}
 
 \cvdoubleitem{\textsc{Experienced}}{Randomized Axelerated Maximum Likelihood new generation (RAXML-NG), MUSCLE5 (multiple sequence alignment)}
@@ -365,6 +117,7 @@ focusing on their arrangement and neighboring genomic regions.}
 
 \spacesubsection{}
 \subsection{Tools}
+\label{tools}
 \spacesubsection{}
 
 \cvdoubleitem{\textsc{Experienced}}{Git (version control), ssh, Vim, Markdown}
@@ -372,6 +125,7 @@ focusing on their arrangement and neighboring genomic regions.}
 
 \spacesubsection{}
 \subsection{Experimental}
+\label{experimental}
 \spacesubsection{}
 
 \cvdoubleitem{\textsc{Fly}}{Handling flies (wild-type, w118, tubby), Drosophila larva dissection (brain, salivary gland, proventriculus, imaginal discs, gastric caeca), Fixing, staining, mounting viewing tissues with Flourescent microscopes, Making PBS, PFA}
@@ -382,12 +136,16 @@ focusing on their arrangement and neighboring genomic regions.}
 % \newpage
 % \spacesection
 \section{Research Topics}
+\label{research-topics}
 \cvdoubleitem{\textsc{Experienced}}{Phylogenetic Tree Construction (Distance, Maximum Likelihood, Bayesian), Evolutionary Biology, Population genetics, R reproducible literate programming, High performance open source software, Scientific Software Development for High Throughput calculations, synteny}
            {\textsc{Interested}}{Biomolecular simulations, Genomics, Modeling genetic markers for disease, Evolutionary genetics}
 
 \spacesection{}
 \section{Affiliations}
+\label{affiliations}
+
 \subsection{Memberships}
+\label{memberships}
 \spacesubsection{}
 \cventry{\textsc{2024--present}}{Nordic Society Oikos}{}{Student Member}{}{}
 \cventry{\textsc{2024--present}}{Icelandic Ecological Society (Vistis)}{}{Student Member}{}{}
@@ -407,6 +165,7 @@ Líffræðigáttin)}{}{Student Member}{}{}
 
 \spacesection{}
 \section{Publications}
+\label{publications}
 %  {\color{color1}\textsc{Journals}}
 
 % \nocite{*}
@@ -424,12 +183,14 @@ Líffræðigáttin)}{}{Student Member}{}{}
 
 \spacesection{}
 \section{Conference Records}
+\label{conference-records}
 
 \subsection{Posters}
+\label{posters}
 \cventry{\textsc{May 2025}}{Diversity in craniofacial elements by populations and sexes in salmonids of Iceland}{Icelandic Ecological Society}{\underline{Ruhila S.}}{}{}
 \cventry{\textsc{November 2022}}{Tracing Lineages of \textit{Salmo Salar} through Histone sequence data}{BES Annual Meeting 2022}{\underline{Ruhila S.}}{}{}
-
 \subsection{Oral Presentations}
+\label{oral-presentations}
 \cventry{\textsc{November 2022}}{High Throughput Reproducible Literate Phylogenetic Analysis}{IEEE PDGC 2022}{R. Goswami, \underline{Ruhila S.}}{}{}
 \cventry{\textsc{November 2022}}{Reproducible High Performance Computing Without Redundancy with Nix}{IEEE PDGC 2022}{R. Goswami, \underline{Ruhila S.}, A. Goswami, S. Goswami and D. Goswami}{}{}
 \cventry{\textsc{November 2022}}{Reproducible Literate Programming Workflows for Censored Data}{IOP Machine Learning for Healthcare}{R. Goswami, \underline{R. S.}}{}{}
@@ -438,7 +199,7 @@ Líffræðigáttin)}{}{Student Member}{}{}
 % this part is a simple cover letter
 %\clearpage
 
-%\recipient{Human Resources}{Some Company Ltd.\\Some Street 123\\12345 Some City} 
+%\recipient{Human Resources}{Some Company Ltd.\\Some Street 123\\12345 Some City}
 %\date{\today}
 %\opening{Dear Sir or Madam,}
 %\closing{Sincerely yours,}
@@ -446,14 +207,7 @@ Líffræðigáttin)}{}{Student Member}{}{}
 
 %\makelettertitle
 
-%\lipsum[1-3] 
+%\lipsum[1-3]
 
 %\makeletterclosing
-
-
 \end{document}
-
-%%% Local Variables:
-%%% mode: latex
-%%% TeX-master: t
-%%% End:

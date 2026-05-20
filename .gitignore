@@ -277,6 +277,8 @@ TSWLatexianTemp*
 # auto folder when using emacs and auctex
 ./auto/*
 *.el
+!scripts/
+!scripts/org2tex.el
 
 # expex forward references with \gathertags
 *-tags.tex
@@ -319,4 +321,3 @@ Temporary Items
 *.icloud
 
 # End of https://www.toptal.com/developers/gitignore/api/macos
-

@@ -1,15 +1,16 @@
 # What? [![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)  [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0) [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-blue.svg)](http://creativecommons.org/licenses/by-nc-sa/4.0/) [![Donation](https://img.shields.io/badge/Donate-%3F-lightgrey.svg)](https://www.instamojo.com/@HaoZeke/)
 
 This is my personal CV based off ModernCV. May be used as a template (follow the
-license!). Compiles with `latexmk`. Derived from 
+license!). The source is maintained as an org-mode literate document and built
+through `emacs` export followed by `latexmk`. Derived from
 [this CV repo](https://github.com/HaoZeke/CV) and [this one](https://github.com/amritagos/cv).
 
 ## How?
 
 - Clone
-- Edit `cv.tex` (in curriculum-vitae)
-- Ensure `latexmk` is installed.
-- Run make (Check `Makefile` for other options)
+- Edit `curriculum-vitae/literate_cv.org`
+- Ensure `emacs`, `latexmk`, and `biber` are installed.
+- Run `make` or `pixi run all`.
 - Profit
 
 ### ARM MacOS
@@ -22,9 +23,10 @@ Rscript -e "tinytex::install_tinytex()"
 # The command above can fail, nevermind
 export PATH="$PATH:$HOME/Library/TinyTeX/bin/universal-darwin"
 tlmgr install texliveonfly # needs python
-texliveonfly -c xelatex cv.tex
-# next time
-latexmk -pvc -pdfxe -f cv.tex
+emacs -nl --script scripts/org2tex.el curriculum-vitae/literate_cv.org
+cd curriculum-vitae
+texliveonfly -c xelatex literate_cv.tex
+latexmk -pvc -pdfxe -f literate_cv.tex
 ```
 
 ## License
