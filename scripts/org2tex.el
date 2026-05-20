@@ -22,6 +22,7 @@
 (setq org-latex-listings 'listings)
 (setq org-confirm-babel-evaluate nil)
 (setq org-latex-prefer-user-labels t)
+(setq org-export-time-stamp-file nil)
 
 (add-to-list 'org-latex-classes
   '("moderncv"
