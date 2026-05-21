@@ -392,6 +392,10 @@ focusing on their arrangement and neighboring genomic regions.}
 :END:
 #+begin_export latex
 % TODO: Add more carpentries
+\cventry{\textsc{Spring 2026}}{LÍF401G Developmental Biology}{University of Iceland}{}{Teaching Assistant}{8 credit undergraduate course on developmental processes across vertebrates and invertebrates, from organismal development to molecular regulation, with practical work in microscopy, embryo analysis, and developmental genetics databases.}
+
+\cventry{\textsc{Fall 2025}}{LÍF541G Plant Physiology}{University of Iceland}{}{Teaching Assistant}{7.5 credit undergraduate course on flowering plant physiology, including growth, hormone and environmental responses, nutrient transport, carbon and nitrogen metabolism, plant-microbe interactions, reproduction, and laboratory exercises.}
+
 \cventry{\textsc{Spring 2025}}{LÍF403G Evolutionary Biology}{University of Iceland}{}{Teaching Assistant}{8 credit undergraduate course on evolutionary theory, natural selection, adaptation, and the history of life.}
 
 \spacesection{}
@@ -497,7 +501,7 @@ focusing on their arrangement and neighboring genomic regions.}
 :END:
 #+begin_export latex
 \cvdoubleitem{\textsc{Experienced}}{Phylogenetic Tree Construction (Distance, Maximum Likelihood, Bayesian), Evolutionary Biology, Population genetics, R reproducible literate programming, High performance open source software, Scientific Software Development for High Throughput calculations, synteny}
-           {\textsc{Interested}}{Biomolecular simulations, Genomics, Modeling genetic markers for disease, Evolutionary genetics}
+           {\textsc{Interested}}{Population genetics, phenotypic-genotypic mapping, structural variation in genomes and selection, salmonids, non-invasive methods}
 
 \spacesection{}
 #+end_export
