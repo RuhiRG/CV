@@ -271,7 +271,7 @@ Scale=MatchLowercase]{MyriadPro}
 % personal data
 \firstname{Ruhila}
 \familyname{Goswami}
-% \quote{}
+\quote{``Nothing exists for itself alone, but only in relation to other forms of life.''\\-- Charles Darwin}
 
 % \faEnvelope \faPhone \faGithub \faGlobe
 
@@ -314,6 +314,7 @@ Scale=MatchLowercase]{MyriadPro}
 #+begin_export latex
 \cvitem{Current name}{Ruhila Goswami}
 \cvitem{Previous name}{Ruhila S.}
+\cvitem{Date of Birth}{20.09.2001}
 
 \spacesection{}
 #+end_export
