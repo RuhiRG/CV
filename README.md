@@ -1,14 +1,20 @@
 # What? [![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)  [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](http://www.gnu.org/licenses/gpl-3.0) [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-blue.svg)](http://creativecommons.org/licenses/by-nc-sa/4.0/) [![Donation](https://img.shields.io/badge/Donate-%3F-lightgrey.svg)](https://www.instamojo.com/@HaoZeke/)
 
 This is my personal CV based off ModernCV. May be used as a template (follow the
-license!). The source is maintained as an org-mode literate document and built
+license!). The source is maintained as org-mode literate documents and built
 through `emacs` export followed by `latexmk`. Derived from
 [this CV repo](https://github.com/HaoZeke/CV) and [this one](https://github.com/amritagos/cv).
+
+| Variant | Source | Output |
+|---------|--------|--------|
+| Full CV | `curriculum-vitae/literate_cv.org` | `Ruhi_Latest-cv.pdf` |
+| Two-page CV | `twoPage/literate_twopage.org` | `Ruhi_TwoPage-cv.pdf` |
 
 ## How?
 
 - Clone
 - Edit `curriculum-vitae/literate_cv.org`
+- Edit `twoPage/literate_twopage.org` for the concise two-page variant.
 - Ensure `emacs`, `latexmk`, and `biber` are installed.
 - Run `make` or `pixi run all`.
 - Profit

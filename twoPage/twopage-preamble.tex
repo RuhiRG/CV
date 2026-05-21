@@ -1,0 +1,58 @@
+\usepackage[a4paper,margin=1.25cm]{geometry}
+\usepackage{xcolor}
+\usepackage{fontspec}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{titlesec}
+\usepackage{microtype}
+\usepackage[british,UKenglish,USenglish,american]{babel}
+\usepackage[autostyle=true]{csquotes}
+
+\definecolor{cvaccent}{RGB}{100, 14, 39}
+\definecolor{cvtext}{RGB}{35, 35, 35}
+\definecolor{cvmuted}{RGB}{82, 82, 82}
+
+\setmainfont[
+Path = ../curriculum-vitae/Fonts/MinionPro/,
+Extension = .otf,
+UprightFont = *_Regular,
+ItalicFont = *_It,
+BoldFont = *_Bold,
+BoldItalicFont = *_BoldIt,
+Ligatures=TeX]{MinionPro}
+
+\setsansfont[
+Path = ../curriculum-vitae/Fonts/MyriadPro/,
+Extension = .otf,
+UprightFont = *_Regular,
+ItalicFont = *_It,
+BoldFont = *_Bold,
+BoldItalicFont = *_BoldIt,
+Ligatures=TeX]{MyriadPro}
+
+\hypersetup{
+  pdfcreator={XeLaTeX},
+  pdftitle={Ruhila Goswami Two-Page CV},
+  colorlinks=true,
+  urlcolor=cvaccent,
+  linkcolor=cvaccent,
+  citecolor=cvaccent
+}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.12em}
+\setlist[itemize]{nosep,leftmargin=1.2em}
+\titleformat{\section}{\large\sffamily\bfseries\color{cvaccent}}{}{0pt}{}[\vspace{-0.35em}\titlerule]
+\titlespacing*{\section}{0pt}{0.65em}{0.35em}
+
+\newcommand{\sectionspace}{\vspace{0.25em}}
+\newcommand{\entry}[4]{%
+  \textbf{#1}\hfill{\small\color{cvmuted}#2}\\%
+  {\small\color{cvmuted}#3}\\[-0.15em]%
+  #4\par\sectionspace}
+\newcommand{\shortentry}[3]{%
+  \textbf{#1}\hfill{\small\color{cvmuted}#2}\\[-0.1em]%
+  #3\par\sectionspace}
+\newcommand{\skillline}[2]{\textbf{#1:} #2\par}

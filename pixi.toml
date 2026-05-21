@@ -8,10 +8,13 @@ platforms = ["osx-arm64", "linux-64"]
 
 [tasks]
 mktex-full = "emacs -nl --script scripts/org2tex.el curriculum-vitae/literate_cv.org"
+mktex-twopage = "emacs -nl --script scripts/org2tex.el twoPage/literate_twopage.org"
 mkpdf-full = { cmd = "latexmk -pdfxe -halt-on-error literate_cv.tex", depends-on = ["mktex-full"], cwd = "curriculum-vitae/" }
-all = { depends-on = ["mkpdf-full"] }
-clean = "find curriculum-vitae -type f \\( -name '*.aux' -o -name '*.log' -o -name '*.bbl' -o -name '*.bcf' -o -name '*.blg' -o -name '*.fdb_latexmk' -o -name '*.fls' -o -name '*.xml' -o -name '*.synctex.gz' -o -name '*.xdv' \\) -delete"
+mkpdf-twopage = { cmd = "latexmk -pdfxe -halt-on-error literate_twopage.tex", depends-on = ["mktex-twopage"], cwd = "twoPage/" }
+all = { depends-on = ["mkpdf-full", "mkpdf-twopage"] }
+clean = "find curriculum-vitae twoPage -type f \\( -name '*.aux' -o -name '*.log' -o -name '*.bbl' -o -name '*.bcf' -o -name '*.blg' -o -name '*.fdb_latexmk' -o -name '*.fls' -o -name '*.xml' -o -name '*.synctex.gz' -o -name '*.xdv' \\) -delete"
 tangle-full = "emacs --batch -l org curriculum-vitae/literate_cv.org --eval '(org-babel-tangle)'"
+tangle-twopage = "emacs --batch -l org twoPage/literate_twopage.org --eval '(org-babel-tangle)'"
 
 [dependencies]
 emacs = "*"
