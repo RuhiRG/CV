@@ -1,6 +1,6 @@
 \documentclass[11pt, a4paper, final, factor=1100, stretch=16, shrink=16]{moderncv}
 
-\usepackage{color}
+\usepackage{xcolor}
 \usepackage{fontspec}
 
 % Stop bugging me about \es
@@ -9,8 +9,10 @@
 \moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
 %\moderncvcolor{blue}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
 
-% the (custom) color which will be used in the cv
+% Academic burgundy accent with neutral greys for a consistent application CV palette.
+\definecolor{color0}{RGB}{35, 35, 35}
 \definecolor{color1}{RGB}{100, 14, 39}
+\definecolor{color2}{RGB}{82, 82, 82}
 
 % scale the page layout (depreciated for more complicated stuff)
 %\usepackage[scale=0.75]{geometry}
@@ -233,7 +235,11 @@ Scale=MatchLowercase]{MyriadPro}
 % this can be used to change some of these infos.
 \AfterPreamble{\hypersetup{
   pdfcreator={XeLaTeX},
-  pdftitle={First fledging CV}
+  pdftitle={Ruhila Goswami CV},
+  colorlinks=true,
+  urlcolor=color1,
+  linkcolor=color1,
+  citecolor=color1
 }}
 
 % for the icons (telephone, globe). I found the icons provided by the
@@ -244,7 +250,7 @@ Scale=MatchLowercase]{MyriadPro}
 % personal data
 \firstname{Ruhila}
 \familyname{Goswami}
-\quote{``Nothing exists for itself alone, but only in relation to other forms of life.''\\-- Charles Darwin}
+% \quote{}
 
 % \faEnvelope \faPhone \faGithub \faGlobe
 
@@ -257,8 +263,7 @@ Scale=MatchLowercase]{MyriadPro}
 }
 
 
-% picture, resized to a height of 84pt
-\photo[84pt]{Picture/ruhi}
+% \photo[84pt]{Picture/ruhi}
 
 % spacing before (sub)sections
 \newcommand{\spacesection}{\vspace{0.4cm}}
@@ -276,146 +281,26 @@ Scale=MatchLowercase]{MyriadPro}
 
 \maketitle
 
-\section{Personal Data}
-\cvitem{Name}{Ruhila Goswami}
-\cvitem{Date Of Birth}{20.09.2001}
-% \cvitem{Birthplace}{Virudhunagar, Tamil Nadu, India}
+\section{Applicant Details}
+\cvitem{Current name}{Ruhila Goswami}
+\cvitem{Previous name}{Ruhila S.}
+
+\spacesection{}
+\section{Research Profile}
+\cvitem{\textsc{Focus}}{Evolutionary divergence in salmonids, linking dental and craniofacial phenotypes with population history, genome structure, and selection.}
+\cvitem{\textsc{Interests}}{Population genetics; phenotypic-genotypic mapping; structural variation in genomes and selection; salmonid evolution; non-invasive methods.}
+\cvitem{\textsc{Methods}}{Phylogenetic inference, genomic synteny, PCR-based sex determination, skeletal phenotyping, field sampling, and reproducible analysis in R and Python.}
 
 \spacesection{}
 \section{Education}
-\cventry{\textsc{2024--2026}}{M.S. Biological Science}{University of Iceland}{Reyjavik}{\emph{Iceland}}{(\textsc{Advisor: } Prof. Arnar Pálsson)}{(\textsc{Thesis: } Evolutionary Divergence in Dental Variation and Sex Chromosome Architecture in Icelandic Brown Trout and Arctic Charr)}
-
+\cventry{\textsc{2024--2026}}{M.S. Biological Science}{University of Iceland}{Reykjavík}{\emph{Iceland}}{(\textsc{Advisor: } Prof. Arnar Pálsson)}{\textsc{Thesis: }Evolutionary Divergence in Dental Variation and Sex Chromosome Architecture in Icelandic Brown Trout and Arctic Charr}
 
 \cventry{\textsc{2021--2024}}{B.S. Biology (Major)}{Indian Institute of Science Education and Research (IISER)}{Mohali}{\emph{India}}{First Division with Honors}
-% (\textsc{Advisor: } Prof. ; \textsc{Co-Advisor: } Prof. )}
-%\textsc{Project: } )}
 \cventry{\textsc{2020}}{Intermediate (AISSCE)}{Velammal Vidyalaya, Ayanabakkam}{Chennai}{\emph{India}}{$83.8\%$ Central Board of Secondary Education (CBSE)}
 \cventry{\textsc{2017}}{High School (AISSE)}{Velammal Vidyalaya, Ayanabakkam}{Chennai}{\emph{India}}{$10.0$ Cumulative Grade Point Average (CGPA) in Central Board of Secondary Education (CBSE)}
 
-\spacesection
-\section{Experience}
-\subsection{Internships}
-
-\cventry{\textsc{Summer 2023}}{Prof. Arnar Pálsson}{University of
-Iceland}{}{Research Staff}{Studied the synteny of Histone genes for Salmonids,
-focusing on their arrangement and neighboring genomic regions.}
-
-\cventry{\textsc{Winter 2022}}{Prof. Debabrata Goswami}{IIT Kanpur}{}{Research Intern}{I familiarized myself the basics of non-linear optics and its usage in optical tweezers for cessation of cancerous cells and microscopy.}
-
-\cventry{\textsc{Winter 2022}}{Dr. Nagma Parveen}{IIT Kanpur}{}{Research Intern}{I familiarized myself with wet-lab methods for studying the mechanisms of viral action under varying external stimuli. I also began work on a protocol for the generation of pseudoviruses for SARS-CoV-2 based on an HIV-1 lentiviral packaging system with a luciferase reporter.}
-
-\cventry{\textsc{Summer 2022}}{Prof. Arnar Pálsson}{University of Iceland}{}{Research Staff}{Detailed analysis in a literate and reproducible manner for simulating a series of possible molecular evolutionary pathways for the \textit{Salmolid} using phylogenetic trees. This involved the five steps on an HPC (High Performance Computer) with literate programming visualization in R:
-  \begin{itemize}
-          \item Data curation with NCBI databases
-          \item Homology inference using similarity measures (BLAST)
-          \item Multiple sequence alignment (MUSCLE5)
-          \item Alignment trimming (G-BLOCK)
-          \item Tree simulation with distance measures (BIONJ) and maximum likelihood approaches (RAXML-NG)
-  \end{itemize}~\\
- \textsc{Project Report: }Computational Primitives for Evolutionary Paths ($\approx 147$ pages)
-}
-
-\cventry{\textsc{Summer 2021}}{Dr. Lolitika Mandal}{IISER Mohali}{}{Research Intern}{Exploring Genetic Tools for working with Drosophila from a wet-lab perspective of data collection and analysis.}
-
-\subsection{Volunteer Work}
-
-\cventry{\textsc{June-August 2024}}{\texttt{pydSEAMSlib}: Enhanced Python bindings for d-SEAMS}{Google Summer of Code}{}{Student Developer}{This was continuation of my last year's project. This project focused on improving the usability and accessibility of `pySEAMS` by creating comprehensive documentation, refining the installation process, and integrating new features to make the tool more user-friendly}
-
-\cventry{\textsc{June-August 2023}}{\texttt{PYSEAMS}: Python bindings for d-SEAMS}{Google Summer of Code}{}{Student Developer}{Developed Python bindings for d-SEAMS, a molecular dynamics analysis engine, enabling qualitative ice structure classification in confined and bulk systems. Refactored C++ code, removed lua bindings, and enhanced usability and functionality for MacOS users. Contributed to the seams-core engine and pyseams repository, improving documentation, automated testing, and code management. Gained skills in compiled languages, binding creation, open-source collaboration, and project management.}
-
-\cventry{\textsc{2022--present}}{IEEE P3173}{IEEE Standards Committee}{}{Secretary}{Am supporting the drafting the IEEE Standard for Endocrine Disrupting Chemical Hazard Labeling}
-
-% \cventry{\textsc{2021--2024}}{Biological Society}{IISER Mohali}{}{Member}{Enthusiastic participant and also am responsible for arranging independent peer-reviewed article readings.}
-
-% \cventry{\textsc{2021--present}}{Dance Society}{IISER Mohali}{}{Member}{Active participant for choreography and performances.}
-
-\spacesection{}
-\section{Teaching Experience}
-% TODO: Add more carpentries
-\cventry{\textsc{Spring 2026}}{LÍF401G Developmental Biology}{University of Iceland}{}{Teaching Assistant}{Course led by Prof. Adam Ray Smith. 8 credit undergraduate course on developmental processes across vertebrates and invertebrates, from organismal development to molecular regulation, with practical work in microscopy, embryo analysis, and developmental genetics databases.}
-
-\cventry{\textsc{Fall 2025}}{LÍF541G Plant Physiology}{University of Iceland}{}{Teaching Assistant}{Course led by Prof. Victor Anthony Albert. 7.5 credit undergraduate course on flowering plant physiology, including growth, hormone and environmental responses, nutrient transport, carbon and nitrogen metabolism, plant-microbe interactions, reproduction, and laboratory exercises.}
-
-\cventry{\textsc{Spring 2025}}{LÍF403G Evolutionary Biology}{University of Iceland}{}{Teaching Assistant}{8 credit undergraduate course on evolutionary theory, natural selection, adaptation, and the history of life.}
-
-\spacesection{}
-\section{Certifications}
-
-% Consider moving to be below Education
-\spacesubsection{}
-\subsection{NPTEL Courses}
-\cventry{\textsc{April 2024}}{Biophotonics}{IIT Kharagpur}{Distinction}{$87\%$}{} % TODO: Add certificate
-\cventry{\textsc{April 2024}}{Introduction to Professional Scientific communication}{IIT Kanpur}{}{$79\%$}{} % TODO: Add certificate
-\cventry{\textsc{Sep 2022}}{Applications of machine learning techniques in biology using WEKA}{IIT Madras}{Distinction}{$93\%$}{} % TODO: Add certificate
-
-\subsection{Other Courses}
-\cventry{\textsc{Nov 2022}}{Practical Python for beginners: a biochemist's guide}{Biochemical Society, U.K.}{}{}{}
-% \cventry{\textsc{Nov 2022}}{The future of HPC programming - a Modern Fortran workshop}{Swedish National Infrastructure for Computing, Online}{}{}{}
-
-\section{Technical Skills}
-\subsection{Programming Languages}
-\spacesubsection{}
-
-\cvdoubleitem{\textsc{Experienced}}{R, Python (3.x), Shell (zsh,bash)}
-           {\textsc{Familiar}}{C, Java}
-
-% \newpage
-\spacesubsection{}
-\subsection{Bioinformatics Packages}
-\spacesubsection{}
-
-\cvdoubleitem{\textsc{Experienced}}{Randomized Axelerated Maximum Likelihood new generation (RAXML-NG), MUSCLE5 (multiple sequence alignment)}
-           {\textsc{Familiar}}{WEKA, BEAST2 (Bayesian Evolutionary Analysis Sampling Trees) via babette, Snakemake}
-
-\spacesubsection{}
-\subsection{Tools}
-\spacesubsection{}
-
-\cvdoubleitem{\textsc{Experienced}}{Git (version control), ssh, Vim, Markdown}
-           {\textsc{Familiar}}{Office-Suites (MS, OpenOffice, LibreOffice)}
-
-\spacesubsection{}
-\subsection{Experimental}
-\spacesubsection{}
-
-\cvdoubleitem{\textsc{Fly}}{Handling flies (wild-type, w118, tubby), Drosophila larva dissection (brain, salivary gland, proventriculus, imaginal discs, gastric caeca), Fixing, staining, mounting viewing tissues with Flourescent microscopes, Making PBS, PFA}
-           {\textsc{Fish}}{Dissection, otolith extraction, bone extraction, DNA extraction and preservation, DNA sex determination via PCR, DNA sequencing, electro-fishing}
-
-\cvdoubleitem{\textsc{Cells}}{Cell culture}
-           {\textsc{Professional}}{Time management, critical thinking, problem solving, communication}
-% \newpage
-% \spacesection
-\section{Research Topics}
-\cvdoubleitem{\textsc{Experienced}}{Phylogenetic Tree Construction (Distance, Maximum Likelihood, Bayesian), Evolutionary Biology, Population genetics, R reproducible literate programming, High performance open source software, Scientific Software Development for High Throughput calculations, synteny}
-           {\textsc{Interested}}{Population genetics, phenotypic-genotypic mapping, structural variation in genomes and selection, salmonids, non-invasive methods}
-
-\spacesection{}
-\section{Affiliations}
-\subsection{Memberships}
-\spacesubsection{}
-\cventry{\textsc{2024--present}}{Nordic Society Oikos}{}{Student Member}{}{}
-\cventry{\textsc{2024--present}}{Icelandic Ecological Society (Vistis)}{}{Student Member}{}{}
-\cventry{\textsc{2024--present}}{The Icelandic Biological Society (
-Líffræðigáttin)}{}{Student Member}{}{}
-\cventry{\textsc{2022--present}}{RSC (Royal Society of Chemistry)}{}{Student Member}{}{}
-\cventry{\textsc{2022--present}}{RSB (Royal Society of Biology)}{}{Student Member}{}{}
-\cventry{\textsc{2022--present}}{British Ecological Society}{}{Student Member}{}{}
-\cventry{\textsc{2022--present}}{Biochemical Society, UK}{}{Undergraduate Member}{}{}
-\cventry{\textsc{2022--present}}{Genetics Society, UK}{}{Undergraduate Member}{}{}
-\cventry{\textsc{2022--present}}{Genetics Society of America}{}{Undergraduate Member}{}{}
-\cventry{\textsc{2022--present}}{Royal Microscopical Society, UK}{}{Undergraduate Member}{}{}
-\cventry{\textsc{2022--present}}{IEEE EMBS (Engineering in Medicine and Biology Society)}{}{Student Member}{}{}
-\cventry{\textsc{2022--present}}{Federation of European Biochemical Societies (FEBS)}{}{Member}{}{}
-\cventry{\textsc{2022--present}}{European Microscopy Society}{}{Member}{}{}
-\cventry{\textsc{2022--present}}{ACM (Association for Computing Machinery)}{}{Student Member}{}{}
-
 \spacesection{}
 \section{Publications}
-%  {\color{color1}\textsc{Journals}}
-
-% \nocite{*}
-% \printbibliography[heading=none, env=midbib, keyword=journal]
-
 {\color{color1}\textsc{Manuscripts in Preparation}}
 
 \cvitem{\textsc{In preparation}}{Evolutionary divergence in tooth numbers and bone shape by populations and species in Icelandic salmonids}
@@ -431,19 +316,87 @@ Líffræðigáttin)}{}{Student Member}{}{}
 \printbibliography[heading=none, env=midbib, keyword=preprint]
 
 \spacesection{}
-\section{Conference Records}
+\section{Presentations and Posters}
 
 \subsection{Posters}
-\cventry{\textsc{April 2026}}{Evolutionary divergence in tooth numbers and bone shape by populations and species in Icelandic salmonids}{Icelandic Ecological Society (Vistís)}{\underline{Ruhila S.}}{}{}
-\cventry{\textsc{March 2026}}{Evolutionary divergence in tooth numbers and bone shape by populations and species in Icelandic salmonids}{NOWPAS}{\underline{Ruhila S.}}{}{}
-\cventry{\textsc{October 2025}}{Evolutionary divergence in tooth numbers and bone shape by populations and species in Icelandic salmonids}{IceBio}{\underline{Ruhila S.}}{}{}
-\cventry{\textsc{2025}}{Diversity in craniofacial elements by populations and sexes in salmonids of Iceland}{Icelandic Ecological Society (Vistís)}{\underline{Ruhila S.}}{Best Poster Award}{}
-\cventry{\textsc{November 2022}}{Tracing Lineages of \textit{Salmo Salar} through Histone sequence data}{BES Annual Meeting 2022}{\underline{Ruhila S.}}{}{}
+\cventry{\textsc{April 2026}}{Evolutionary divergence in tooth numbers and bone shape by populations and species in Icelandic salmonids}{Icelandic Ecological Society (Vistís)}{\underline{Ruhila Goswami}}{}{}
+\cventry{\textsc{March 2026}}{Evolutionary divergence in tooth numbers and bone shape by populations and species in Icelandic salmonids}{NOWPAS}{\underline{Ruhila Goswami}}{}{}
+\cventry{\textsc{October 2025}}{Evolutionary divergence in tooth numbers and bone shape by populations and species in Icelandic salmonids}{IceBio}{\underline{Ruhila Goswami}}{}{}
+\cventry{\textsc{2025}}{Diversity in craniofacial elements by populations and sexes in salmonids of Iceland}{Icelandic Ecological Society (Vistís)}{\underline{Ruhila Goswami}}{Best Poster Award}{}
+\cventry{\textsc{November 2022}}{Tracing Lineages of \textit{Salmo salar} through Histone sequence data}{BES Annual Meeting 2022}{\underline{Ruhila S. Goswami (née S.)}}{}{}
 
 \subsection{Oral Presentations}
-\cventry{\textsc{November 2022}}{High Throughput Reproducible Literate Phylogenetic Analysis}{IEEE PDGC 2022}{R. Goswami, \underline{Ruhila S.}}{}{}
-\cventry{\textsc{November 2022}}{Reproducible High Performance Computing Without Redundancy with Nix}{IEEE PDGC 2022}{R. Goswami, \underline{Ruhila S.}, A. Goswami, S. Goswami and D. Goswami}{}{}
+\cventry{\textsc{November 2022}}{High Throughput Reproducible Literate Phylogenetic Analysis}{IEEE PDGC 2022}{R. Goswami, \underline{Ruhila S. Goswami (née S.)}}{}{}
+\cventry{\textsc{November 2022}}{Reproducible High Performance Computing Without Redundancy with Nix}{IEEE PDGC 2022}{R. Goswami, \underline{Ruhila S. Goswami (née S.)}, A. Goswami, S. Goswami and D. Goswami}{}{}
 \cventry{\textsc{November 2022}}{Reproducible Literate Programming Workflows for Censored Data}{IOP Machine Learning for Healthcare}{R. Goswami, \underline{R. S.}}{}{}
+
+\spacesection{}
+\section{Honors and Awards}
+\cventry{\textsc{2025}}{Best Poster Award}{Icelandic Ecological Society (Vistís)}{}{}{}
+
+\spacesection{}
+\section{Research Experience}
+\cventry{\textsc{Summer 2023}}{Prof. Arnar Pálsson}{University of Iceland}{}{Research Staff}{Studied the synteny of histone genes in salmonids, focusing on gene arrangement and neighboring genomic regions.}
+
+\cventry{\textsc{Winter 2022}}{Prof. Debabrata Goswami}{IIT Kanpur}{}{Research Intern}{Studied the basics of non-linear optics and applications of optical tweezers in cancer cell research and microscopy.}
+
+\cventry{\textsc{Winter 2022}}{Dr. Nagma Parveen}{IIT Kanpur}{}{Research Intern}{Studied wet-lab methods for viral mechanisms under external stimuli and began work on a SARS-CoV-2 pseudovirus protocol using an HIV-1 lentiviral packaging system with a luciferase reporter.}
+
+\cventry{\textsc{Summer 2022}}{Prof. Arnar Pálsson}{University of Iceland}{}{Research Staff}{Detailed analysis in a literate and reproducible manner for simulating a series of possible molecular evolutionary pathways for the \textit{Salmonid} using phylogenetic trees. This involved the five steps on an HPC (High Performance Computer) with literate programming visualization in R:
+  \begin{itemize}
+          \item Data curation with NCBI databases
+          \item Homology inference using similarity measures (BLAST)
+          \item Multiple sequence alignment (MUSCLE5)
+          \item Alignment trimming (Gblocks)
+          \item Tree simulation with distance measures (BIONJ) and maximum likelihood approaches (RAxML-NG)
+  \end{itemize}~\\
+ \textsc{Project Report: }Computational Primitives for Evolutionary Paths ($\approx 147$ pages)
+}
+
+\cventry{\textsc{Summer 2021}}{Dr. Lolitika Mandal}{IISER Mohali}{}{Research Intern}{Explored genetic tools for working with \textit{Drosophila} from a wet-lab perspective of data collection and analysis.}
+
+\spacesection{}
+\section{Teaching Experience}
+\cventry{\textsc{Spring 2026}}{LÍF401G Developmental Biology}{University of Iceland}{}{Teaching Assistant}{Course led by Prof. Adam Ray Smith. Assisted with embryo analysis for an 8 credit undergraduate developmental biology course.}
+
+\cventry{\textsc{Fall 2025}}{LÍF541G Plant Physiology}{University of Iceland}{}{Teaching Assistant}{Course led by Prof. Victor Anthony Albert. Led student discussions in a 7.5 credit undergraduate course focused primarily on plant genetics.}
+
+\cventry{\textsc{Spring 2025}}{LÍF403G Evolutionary Biology}{University of Iceland}{}{Teaching Assistant}{8 credit undergraduate course on evolutionary theory, natural selection, adaptation, and the history of life.}
+
+\spacesection{}
+\section{Research Skills}
+\cvdoubleitem{\textsc{Genomics}}{Population genetics, genomic synteny, structural variation, PCR-based sex determination, non-invasive sampling}
+           {\textsc{Phenotypes}}{Dental and craniofacial variation, bone extraction, otolith extraction, fish dissection, embryo analysis}
+
+\cvdoubleitem{\textsc{Evolutionary methods}}{Phylogenetic tree construction (distance, maximum likelihood, Bayesian), BLAST, MUSCLE5, Gblocks, RAxML-NG, BEAST2}
+           {\textsc{Computing}}{R, Python, shell, Git, Snakemake, reproducible literate programming}
+
+\cvdoubleitem{\textsc{Laboratory}}{DNA extraction and preservation, PCR, microscopy, \textit{Drosophila} tissue dissection, cell culture}
+           {\textsc{Field}}{Electrofishing, salmonid sampling and preservation}
+
+\spacesection{}
+\section{Service and Open Source}
+\cventry{\textsc{June-August 2024}}{\texttt{pydSEAMSlib}: Enhanced Python bindings for d-SEAMS}{Google Summer of Code}{}{Student Developer}{Improved usability and accessibility of pySEAMS through documentation, installation refinements, and user-facing features.}
+
+\cventry{\textsc{June-August 2023}}{\texttt{PYSEAMS}: Python bindings for d-SEAMS}{Google Summer of Code}{}{Student Developer}{Developed Python bindings for d-SEAMS, a molecular dynamics analysis engine for qualitative ice structure classification in confined and bulk systems. Refactored C++ code, removed Lua bindings, improved macOS support, and contributed to documentation, automated testing, and repository maintenance.}
+
+\cventry{\textsc{2022--present}}{IEEE P3173}{IEEE Standards Committee}{}{Secretary}{Supporting the drafting of the IEEE Standard for Endocrine Disrupting Chemical Hazard Labeling.}
+
+\spacesection{}
+\section{Affiliations}
+\cventry{\textsc{2024--present}}{Nordic Society Oikos}{}{Student Member}{}{}
+\cventry{\textsc{2024--present}}{Icelandic Ecological Society (Vistís)}{}{Student Member}{}{}
+\cventry{\textsc{2024--present}}{The Icelandic Biological Society (Líffræðigáttin)}{}{Student Member}{}{}
+\cventry{\textsc{2022--present}}{British Ecological Society}{}{Student Member}{}{}
+\cventry{\textsc{2022--present}}{Genetics Society, UK}{}{Undergraduate Member}{}{}
+\cventry{\textsc{2022--present}}{Genetics Society of America}{}{Undergraduate Member}{}{}
+
+\spacesection{}
+\section{Certifications}
+\cventry{\textsc{April 2024}}{Biophotonics}{IIT Kharagpur}{Distinction}{$87\%$}{}
+\cventry{\textsc{April 2024}}{Introduction to Professional Scientific communication}{IIT Kanpur}{}{$79\%$}{}
+\cventry{\textsc{Sep 2022}}{Applications of machine learning techniques in biology using WEKA}{IIT Madras}{Distinction}{$93\%$}{}
+\cventry{\textsc{Nov 2022}}{Practical Python for beginners: a biochemist's guide}{Biochemical Society, U.K.}{}{}{}
 
 %=============================
 % this part is a simple cover letter

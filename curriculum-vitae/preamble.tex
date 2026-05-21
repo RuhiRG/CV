@@ -1,4 +1,4 @@
-\usepackage{color}
+\usepackage{xcolor}
 \usepackage{fontspec}
 
 % Stop bugging me about \es
@@ -7,8 +7,10 @@
 \moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
 %\moderncvcolor{blue}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
 
-% the (custom) color which will be used in the cv
+% Academic burgundy accent with neutral greys for a consistent application CV palette.
+\definecolor{color0}{RGB}{35, 35, 35}
 \definecolor{color1}{RGB}{100, 14, 39}
+\definecolor{color2}{RGB}{82, 82, 82}
 
 % scale the page layout (depreciated for more complicated stuff)
 %\usepackage[scale=0.75]{geometry}
@@ -231,7 +233,11 @@ Scale=MatchLowercase]{MyriadPro}
 % this can be used to change some of these infos.
 \AfterPreamble{\hypersetup{
   pdfcreator={XeLaTeX},
-  pdftitle={First fledging CV}
+  pdftitle={Ruhila Goswami CV},
+  colorlinks=true,
+  urlcolor=color1,
+  linkcolor=color1,
+  citecolor=color1
 }}
 
 % for the icons (telephone, globe). I found the icons provided by the
@@ -242,7 +248,7 @@ Scale=MatchLowercase]{MyriadPro}
 % personal data
 \firstname{Ruhila}
 \familyname{Goswami}
-\quote{``Nothing exists for itself alone, but only in relation to other forms of life.''\\-- Charles Darwin}
+% \quote{}
 
 % \faEnvelope \faPhone \faGithub \faGlobe
 
@@ -255,8 +261,7 @@ Scale=MatchLowercase]{MyriadPro}
 }
 
 
-% picture, resized to a height of 84pt
-\photo[84pt]{Picture/ruhi}
+% \photo[84pt]{Picture/ruhi}
 
 % spacing before (sub)sections
 \newcommand{\spacesection}{\vspace{0.4cm}}
