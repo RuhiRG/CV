@@ -471,7 +471,7 @@ Scale=MatchLowercase]{MyriadPro}
 \cvdoubleitem{\textsc{Evolutionary methods}}{Phylogenetic tree construction (distance, maximum likelihood, Bayesian), BLAST, MUSCLE5, Gblocks, RAxML-NG, BEAST2}
            {\textsc{Computing}}{R, Python, shell, Git, Snakemake, reproducible literate programming}
 
-\cvdoubleitem{\textsc{Laboratory}}{DNA extraction and preservation, PCR, microscopy, \textit{Drosophila} tissue dissection, cell culture}
+\cvdoubleitem{\textsc{Laboratory}}{DNA isolation and preservation, PCR, microscopy, \textit{Drosophila} tissue dissection, cell culture}
            {\textsc{Field}}{Electrofishing, salmonid sampling and preservation}
 
 \spacesection{}
