@@ -1,4 +1,4 @@
-\usepackage[a4paper,margin=1.25cm]{geometry}
+\usepackage[a4paper,margin=1.35cm,top=1.4cm,bottom=1.4cm]{geometry}
 \usepackage{xcolor}
 \usepackage{fontspec}
 \usepackage{graphicx}
@@ -42,17 +42,17 @@ Ligatures=TeX]{MyriadPro}
 
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{0.12em}
-\setlist[itemize]{nosep,leftmargin=1.2em}
-\titleformat{\section}{\large\sffamily\bfseries\color{cvaccent}}{}{0pt}{}[\vspace{-0.35em}\titlerule]
-\titlespacing*{\section}{0pt}{0.65em}{0.35em}
+\setlength{\parskip}{0.22em}
+\setlist[itemize]{nosep,leftmargin=1.2em,itemsep=0.12em,topsep=0.15em}
+\titleformat{\section}{\large\sffamily\bfseries\color{cvaccent}}{}{0pt}{}[\vspace{-0.3em}\titlerule]
+\titlespacing*{\section}{0pt}{0.85em}{0.45em}
 
-\newcommand{\sectionspace}{\vspace{0.25em}}
+\newcommand{\sectionspace}{\vspace{0.38em}}
 \newcommand{\entry}[4]{%
   \textbf{#1}\hfill{\small\color{cvmuted}#2}\\%
-  {\small\color{cvmuted}#3}\\[-0.15em]%
+  {\small\color{cvmuted}#3}\\[-0.08em]%
   #4\par\sectionspace}
 \newcommand{\shortentry}[3]{%
-  \textbf{#1}\hfill{\small\color{cvmuted}#2}\\[-0.1em]%
+  \textbf{#1}\hfill{\small\color{cvmuted}#2}\\[-0.05em]%
   #3\par\sectionspace}
-\newcommand{\skillline}[2]{\textbf{#1:} #2\par}
+\newcommand{\skillline}[2]{\textbf{#1:} #2\par\vspace{0.12em}}
