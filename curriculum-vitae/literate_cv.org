@@ -353,6 +353,7 @@ Scale=MatchLowercase]{MyriadPro}
 {\color{color1}\textsc{Manuscripts in Preparation}}
 
 \cvitem{\textsc{In preparation}}{Evolutionary divergence in tooth numbers and bone shape by populations and species in Icelandic salmonids}
+\cvitem{\textsc{In preparation}}{Concordant PCR and RAD-seq evidence localises the brown trout (\textit{Salmo trutta}) sex locus to distal LG28 across Icelandic populations (with M.\ Lagunas and A.\ Pálsson)}
 
 {\color{color1}\textsc{Conference Proceedings}}
 
