@@ -123,7 +123,7 @@ Ligatures=TeX]{MyriadPro}
 \skillline{Genomics}{Population genetics, genomic synteny, structural variation, PCR-based sex determination, non-invasive sampling.}
 \skillline{Phenotypes and fieldwork}{Dental and craniofacial variation, bone extraction, otolith extraction, fish dissection, electrofishing, salmonid sampling and preservation.}
 \skillline{Evolutionary methods}{Phylogenetic tree construction (distance, maximum likelihood, Bayesian), BLAST, MUSCLE5, Gblocks, RAxML-NG, BEAST2.}
-\skillline{Computing and lab}{R, Python, shell, Git, Snakemake, reproducible literate programming, DNA extraction and preservation, PCR, microscopy, \textit{Drosophila} tissue dissection, cell culture.}
+\skillline{Computing and lab}{R, Python, shell, Git, Snakemake, reproducible literate programming, DNA isolation and preservation, PCR, microscopy, \textit{Drosophila} tissue dissection, cell culture.}
 
 \section{Service, Open Source, and Affiliations}
 \shortentry{Google Summer of Code}{2023--2024}{Student Developer on Python bindings and documentation for d-SEAMS/pySEAMS, including installation refinements, usability improvements, and repository maintenance.}
