@@ -325,7 +325,7 @@ Scale=MatchLowercase]{MyriadPro}
 :END:
 #+begin_export latex
 \cvitem{\textsc{Focus}}{Genetics; within-population variation; evolutionary divergence.}
-\cvitem{\textsc{Interests}}{Molecular and developmental biology: how genetic differences shape gene expression, fate choices, cell behaviour and responses, and regulatory pathways. Population genetics; phenotypic-genotypic mapping; structural variation in genomes and selection; salmonid evolution; non-invasive methods.}
+\cvitem{\textsc{Interests}}{Molecular and developmental biology; genetic control of gene expression and cell fate; regulatory pathways and cellular stress responses; population genetics; phenotype-genotype mapping; structural variation in genomes and selection; salmonid evolution; non-invasive methods.}
 \cvitem{\textsc{Methods}}{Phylogenetic inference, genomic synteny, PCR-based sex determination, skeletal phenotyping, field sampling, and reproducible analysis in R and Python.}
 
 \spacesection{}
