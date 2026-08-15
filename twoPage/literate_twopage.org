@@ -136,6 +136,10 @@ Ligatures=TeX]{MyriadPro}
 \shortentry{Google Summer of Code}{2023-2024}{Student Developer on Python bindings and documentation for d-SEAMS/pySEAMS (installation, usability, repository maintenance).}
 \shortentry{IEEE P3173}{2022-present}{Secretary, IEEE Standards Committee for Endocrine Disrupting Chemical Hazard Labeling.}
 \skillline{Memberships}{Nordic Society Oikos; Icelandic Ecological Society (Vistís); Icelandic Biological Society (Líffræðigáttin); British Ecological Society; Genetics Society, UK; Genetics Society of America.}
+\section{Referees}
+\skillline{Prof.\ Arnar Pálsson}{MSc supervisor, Institute of Life and Environmental Sciences, University of Iceland. \href{mailto:apalsson@hi.is}{apalsson@hi.is}}
+\skillline{Prof.\ Victor Anthony Albert}{Course supervisor (LÍF541G), University of Iceland. \href{mailto:victoralbert@hi.is}{victoralbert@hi.is}}
+
 \vspace*{\fill}
-{\small\color{cvmuted}\textit{Curriculum vitae, Ruhila Goswami (relocating to Leiden area, NL).}}
+{\small\color{cvmuted}\textit{Curriculum vitae, Ruhila Goswami.}}
 #+end_export
