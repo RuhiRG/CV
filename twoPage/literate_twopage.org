@@ -96,7 +96,7 @@ Ligatures=TeX]{MyriadPro}
 
 \section{Research Profile}
 \skillline{Focus}{Genetics; within-population variation; evolutionary divergence.}
-\skillline{Interests}{Population genetics; phenotypic-genotypic mapping; structural variation and selection; salmonid evolution; non-invasive methods; reproducible computational biology.}
+\skillline{Interests}{Molecular and developmental biology: how genetic differences shape gene expression, fate choices, cell behaviour and responses, and regulatory pathways. Population genetics; phenotypic-genotypic mapping; structural variation and selection; salmonid evolution; non-invasive methods; reproducible computational biology.}
 \skillline{Methods}{Phylogenetic inference, genomic synteny, PCR-based sex determination and DNA isolation, skeletal phenotyping (tooth counts and bone shape), field sampling, and reproducible analysis in R and Python.}
 
 \section{Education}
