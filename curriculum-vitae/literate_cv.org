@@ -350,8 +350,9 @@ Scale=MatchLowercase]{MyriadPro}
 :CUSTOM_ID: publications
 :END:
 #+begin_export latex
-{\color{color1}\textsc{Manuscripts in Preparation}}
+{\color{color1}\textsc{Manuscripts}}
 
+\cvitem{\textsc{Under review}}{rsx: a high-performance streaming toolkit for RAD-seq sex determination (with Rohit Goswami), \textit{BMC Bioinformatics}}
 \cvitem{\textsc{In preparation}}{Evolutionary divergence in tooth numbers and bone shape by populations and species in Icelandic salmonids}
 \cvitem{\textsc{In preparation}}{Concordant PCR and RAD-seq evidence localises the brown trout (\textit{Salmo trutta}) sex locus to distal LG28 across Icelandic populations (with M.\ Lagunas and A.\ Pálsson)}
 
