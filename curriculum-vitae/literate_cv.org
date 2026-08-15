@@ -271,7 +271,7 @@ Scale=MatchLowercase]{MyriadPro}
 % personal data
 \firstname{Ruhila}
 \familyname{Goswami}
-\quote{``Nothing exists for itself alone, but only in relation to other forms of life.''\\-- Charles Darwin}
+\quote{``Nothing exists for itself alone, but only in relation to other forms of life.''\\ Charles Darwin}
 
 % \faEnvelope \faPhone \faGithub \faGlobe
 
@@ -336,9 +336,9 @@ Scale=MatchLowercase]{MyriadPro}
 :CUSTOM_ID: education
 :END:
 #+begin_export latex
-\cventry{\textsc{2024--2026}}{M.S. Biological Science}{University of Iceland}{Reykjavík}{\emph{Iceland}}{(\textsc{Advisor: } Prof. Arnar Pálsson)}{\textsc{Thesis: }Evolutionary Divergence in Dental Variation and Sex Chromosome Architecture in Icelandic Brown Trout and Arctic Charr}
+\cventry{\textsc{2024-2026}}{M.S. Biological Science}{University of Iceland}{Reykjavík}{\emph{Iceland}}{(\textsc{Advisor: } Prof. Arnar Pálsson)}{\textsc{Thesis: }Evolutionary Divergence in Dental Variation and Sex Chromosome Architecture in Icelandic Brown Trout and Arctic Charr}
 
-\cventry{\textsc{2021--2024}}{B.S. Biology (Major)}{Indian Institute of Science Education and Research (IISER)}{Mohali}{\emph{India}}{First Division with Honors}
+\cventry{\textsc{2021-2024}}{B.S. Biology (Major)}{Indian Institute of Science Education and Research (IISER)}{Mohali}{\emph{India}}{First Division with Honors}
 \cventry{\textsc{2020}}{Intermediate (AISSCE)}{Velammal Vidyalaya, Ayanabakkam}{Chennai}{\emph{India}}{$83.8\%$ Central Board of Secondary Education (CBSE)}
 \cventry{\textsc{2017}}{High School (AISSE)}{Velammal Vidyalaya, Ayanabakkam}{Chennai}{\emph{India}}{$10.0$ Cumulative Grade Point Average (CGPA) in Central Board of Secondary Education (CBSE)}
 
@@ -488,7 +488,7 @@ Scale=MatchLowercase]{MyriadPro}
 
 \cventry{\textsc{June-August 2023}}{\texttt{PYSEAMS}: Python bindings for d-SEAMS}{Google Summer of Code}{}{Student Developer}{Developed Python bindings for d-SEAMS, a molecular dynamics analysis engine for qualitative ice structure classification in confined and bulk systems. Refactored C++ code, removed Lua bindings, improved macOS support, and contributed to documentation, automated testing, and repository maintenance.}
 
-\cventry{\textsc{2022--present}}{IEEE P3173}{IEEE Standards Committee}{}{Secretary}{Supporting the drafting of the IEEE Standard for Endocrine Disrupting Chemical Hazard Labeling.}
+\cventry{\textsc{2022-present}}{IEEE P3173}{IEEE Standards Committee}{}{Secretary}{Supporting the drafting of the IEEE Standard for Endocrine Disrupting Chemical Hazard Labeling.}
 
 \spacesection{}
 #+end_export
@@ -498,12 +498,12 @@ Scale=MatchLowercase]{MyriadPro}
 :CUSTOM_ID: affiliations
 :END:
 #+begin_export latex
-\cventry{\textsc{2024--present}}{Nordic Society Oikos}{}{Student Member}{}{}
-\cventry{\textsc{2024--present}}{Icelandic Ecological Society (Vistís)}{}{Student Member}{}{}
-\cventry{\textsc{2024--present}}{The Icelandic Biological Society (Líffræðigáttin)}{}{Student Member}{}{}
-\cventry{\textsc{2022--present}}{British Ecological Society}{}{Student Member}{}{}
-\cventry{\textsc{2022--present}}{Genetics Society, UK}{}{Undergraduate Member}{}{}
-\cventry{\textsc{2022--present}}{Genetics Society of America}{}{Undergraduate Member}{}{}
+\cventry{\textsc{2024-present}}{Nordic Society Oikos}{}{Student Member}{}{}
+\cventry{\textsc{2024-present}}{Icelandic Ecological Society (Vistís)}{}{Student Member}{}{}
+\cventry{\textsc{2024-present}}{The Icelandic Biological Society (Líffræðigáttin)}{}{Student Member}{}{}
+\cventry{\textsc{2022-present}}{British Ecological Society}{}{Student Member}{}{}
+\cventry{\textsc{2022-present}}{Genetics Society, UK}{}{Undergraduate Member}{}{}
+\cventry{\textsc{2022-present}}{Genetics Society of America}{}{Undergraduate Member}{}{}
 
 \spacesection{}
 #+end_export
