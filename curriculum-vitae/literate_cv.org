@@ -325,8 +325,8 @@ Scale=MatchLowercase]{MyriadPro}
 :END:
 #+begin_export latex
 \cvitem{\textsc{Focus}}{Genetics; within-population variation; evolutionary divergence.}
-\cvitem{\textsc{Interests}}{Molecular and developmental biology; genetic control of gene expression and cell fate; regulatory pathways and cellular stress responses; population genetics; phenotype-genotype mapping; structural variation in genomes and selection; salmonid evolution; non-invasive methods.}
-\cvitem{\textsc{Methods}}{Phylogenetic inference, genomic synteny, PCR-based sex determination, skeletal phenotyping, field sampling, and reproducible analysis in R and Python.}
+\cvitem{\textsc{Interests}}{Molecular and developmental biology; genetic control of gene expression and cell fate; regulatory pathways and cellular stress responses; population genetics; phenotype-genotype mapping; structural variation in genomes and selection; salmonid evolution; non-invasive methods; nucleic-acid delivery.}
+\cvitem{\textsc{Methods}}{Phylogenetic inference, genomic synteny, PCR-based sex determination, skeletal phenotyping, field sampling, mammalian cell culture, lentiviral packaging, and reproducible analysis in R and Python.}
 
 \spacesection{}
 #+end_export
@@ -352,7 +352,7 @@ Scale=MatchLowercase]{MyriadPro}
 #+begin_export latex
 {\color{color1}\textsc{Manuscripts}}
 
-\cvitem{\textsc{Under review}}{rsx: a high-performance streaming toolkit for RAD-seq sex determination (with Rohit Goswami), \textit{BMC Bioinformatics}}
+\cvitem{\textsc{Published}}{rsx: a high-performance streaming toolkit for RAD-seq sex determination (with Rohit Goswami), \textit{BMC Bioinformatics} (2026), \href{https://doi.org/10.1186/s12859-026-06628-4}{doi:10.1186/s12859-026-06628-4}}
 \cvitem{\textsc{In preparation}}{Evolutionary divergence in tooth numbers and bone shape by populations and species in Icelandic salmonids}
 \cvitem{\textsc{In preparation}}{Concordant PCR and RAD-seq evidence localises the brown trout (\textit{Salmo trutta}) sex locus to distal LG28 across Icelandic populations (with M.\ Lagunas and A.\ Pálsson)}
 
